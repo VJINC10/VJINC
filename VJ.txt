@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>32-Team Soccer Tournament Night | Bar • DJ • Big Screens</title>
+  <meta name="description" content="32-team soccer gaming tournament at a bar with DJ, big screens, and cash prizes. Limited slots. Sign up now." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111826; --muted:#9aa7b2; --text:#e8eef3;
+      --accent:#34d399; --accent2:#60a5fa; --danger:#f87171; --border:#1f2a3a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:radial-gradient(900px 600px at 20% 0%, #12233a 0%, var(--bg) 60%);color:var(--text)}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 10px 30px rgba(52,211,153,.15)}
+    .brand strong{letter-spacing:.2px}
+    .navlinks{display:flex;gap:14px;flex-wrap:wrap}
+    .navlinks a{opacity:.9;text-decoration:none;border:1px solid transparent;padding:8px 10px;border-radius:12px}
+    .navlinks a:hover{border-color:var(--border);background:rgba(255,255,255,.03)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
+    .card{background:rgba(17,24,38,.78);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.35);backdrop-filter: blur(6px)}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 14px}
+    .pill{font-size:12px;color:#d7e5ef;border:1px solid var(--border);background:rgba(255,255,255,.02);padding:6px 10px;border-radius:999px}
+    h1{margin:0 0 10px;font-size:36px;line-height:1.05}
+    .sub{color:var(--muted);line-height:1.5;margin:0 0 14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);padding:12px 14px;border-radius:14px;font-weight:650;cursor:pointer;text-decoration:none;display:inline-flex;gap:10px;align-items:center}
+    .btn.primary{border-color:rgba(52,211,153,.45);background:linear-gradient(135deg,rgba(52,211,153,.25),rgba(96,165,250,.12))}
+    .btn:hover{filter:brightness(1.06)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    .metric{padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+    .metric .k{font-size:13px;color:var(--muted)}
+    .metric .v{font-size:22px;font-weight:800;margin-top:6px}
+    .section{margin-top:18px}
+    h2{margin:0 0 10px;font-size:20px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    ul{margin:10px 0 0;padding-left:18px;color:#d9e6ef}
+    li{margin:6px 0}
+    .muted{color:var(--muted)}
+    .table{width:100%;border-collapse:separate;border-spacing:0;margin-top:10px}
+    .table th,.table td{padding:10px 12px;border-top:1px solid var(--border);text-align:left}
+    .table th{color:#cfe0ec;font-size:13px}
+    .table tr:first-child th,.table tr:first-child td{border-top:none}
+    .tag{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);display:inline-block}
+    .ok{border-color:rgba(52,211,153,.5)}
+    .warn{border-color:rgba(248,113,113,.5)}
+    .formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+    label{display:block;font-size:12px;color:#cfe0ec;margin-bottom:6px}
+    input,select,textarea{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.02);color:var(--text);outline:none
+    }
+    textarea{min-height:88px;resize:vertical}
+    .full{grid-column:1/-1}
+    .fine{font-size:12px;color:var(--muted);line-height:1.4;margin-top:10px}
+    .footer{margin:22px 0 10px;color:var(--muted);font-size:12px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
+    .hr{height:1px;background:var(--border);margin:16px 0}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .formgrid{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>Soccer Tournament Night</strong><br/>
+          <span class="muted" style="font-size:12px;">Bar • DJ • Big Screens</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#details">Details</a>
+        <a href="#prizes">Prizes</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#rules">Rules</a>
+        <a href="#signup">Sign Up</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <div class="pillrow">
+          <span class="pill">32 Teams</span>
+          <span class="pill">5 Stations</span>
+          <span class="pill">DJ All Night</span>
+          <span class="pill">Cash Prizes</span>
+          <span class="pill">Limited Slots</span>
+        </div>
+
+        <h1>32-Team Soccer Tournament Night</h1>
+        <p class="sub">
+          A high-energy bar tournament experience: big screens, music, and serious competition.
+          Pay the team fee, lock your spot, and bring the squad energy.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#signup">✅ Reserve a Team Slot</a>
+          <a class="btn" href="#prizes">🏆 View Prizes</a>
+          <a class="btn" href="#rules">📄 Rules & Format</a>
+        </div>
+
+        <div class="grid3">
+          <div class="metric">
+            <div class="k">Team Entry Fee</div>
+            <div class="v">$500</div>
+          </div>
+          <div class="metric">
+            <div class="k">1st Place Prize</div>
+            <div class="v">$5,000</div>
+          </div>
+          <div class="metric">
+            <div class="k">Format</div>
+            <div class="v">Groups → Knockout</div>
+          </div>
+        </div>
+
+        <div class="fine">
+          <strong>Location:</strong> <span id="venueText" class="muted">[Your Venue Name, City]</span> •
+          <strong>Date/Time:</strong> <span id="dateText" class="muted">[Month Day, 2026 — 4PM–10PM]</span><br/>
+          <span class="muted">Tip: Update the bracket, venue, and payment links below before publishing.</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Quick Info</h2>
+        <table class="table">
+          <tr><th>Stations</th><td>Up to 5 game stations (big screens)</td></tr>
+          <tr><th>DJ</th><td>Playing during matches + finals hype</td></tr>
+          <tr><th>Teams</th><td>32 team cap (first paid, first locked)</td></tr>
+          <tr><th>Players</th><td>1–2 players per team (recommended)</td></tr>
+          <tr><th>Check-in</th><td>30 minutes before start</td></tr>
+        </table>
+
+        <div class="hr"></div>
+
+        <h2>Payment</h2>
+        <p class="muted" style="margin:0 0 10px;">
+          Use your preferred payment method. Add your payment links here.
+        </p>
+        <div class="cta">
+          <a class="btn" id="payLink1" href="#" target="_blank" rel="noreferrer">💸 Pay via Cash App</a>
+          <a class="btn" id="payLink2" href="#" target="_blank" rel="noreferrer">💳 Pay via Zelle</a>
+          <a class="btn" id="payLink3" href="#" target="_blank" rel="noreferrer">🎟️ Pay via Eventbrite</a>
+        </div>
+
+        <p class="fine">
+          <span class="tag ok">Slot locked only after payment</span>
+          <span class="tag warn" style="margin-left:8px;">No refunds after bracket release</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="section two" id="details">
+      <div class="card">
+        <h2>Event Details</h2>
+        <ul>
+          <li><strong>Venue vibe:</strong> bar + lounge setup with big screens and music.</li>
+          <li><strong>Match experience:</strong> crowd-friendly finals on the largest screen.</li>
+          <li><strong>Value:</strong> multiple matches guaranteed (group stage before knockout).</li>
+          <li><strong>Extras:</strong> drink specials, raffle, and highlight clips.</li>
+        </ul>
+        <p class="fine">
+          Want this to feel “premium”? Add a simple trophy + medals for top 4.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Format Summary</h2>
+        <ul>
+          <li><strong>Group Stage:</strong> 8 groups of 4 teams (round-robin).</li>
+          <li><strong>Advancement:</strong> top 2 per group → Round of 16.</li>
+          <li><strong>Knockout:</strong> single elimination to final + 3rd place match.</li>
+          <li><strong>Game settings:</strong> standardized (see rules below).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section two" id="prizes">
+      <div class="card">
+        <h2>Prize Payouts</h2>
+        <table class="table">
+          <tr><th>🥇 1st Place</th><td><strong>$5,000</strong></td></tr>
+          <tr><th>🥈 2nd Place</th><td><strong>$2,500</strong></td></tr>
+          <tr><th>🥉 3rd Place</th><td><strong>$1,200</strong></td></tr>
+          <tr><th>🏅 4th Place</th><td><strong>$800</strong></td></tr>
+        </table>
+        <p class="fine">
+          Payouts are based on a full 32-team bracket. If a cap change occurs, payouts may adjust proportionally.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Optional Side Pots (Extra Hype)</h2>
+        <ul>
+          <li><strong>MVP Side Pot:</strong> $50/team (winner takes all).</li>
+          <li><strong>Spectator Raffle:</strong> win a controller or bar tab.</li>
+          <li><strong>Finals Challenge:</strong> “Golden Goal” mini game.</li>
+        </ul>
+        <p class="fine">
+          Side pots can increase prize excitement without reducing organizer margins.
+        </p>
+      </div>
+    </div>
+
+    <div class="section" id="schedule">
+      <div class="card">
+        <h2>Sample Schedule</h2>
+        <table class="table">
+          <tr><th>4:00 PM</th><td>Doors open / check-in</td></tr>
+          <tr><th>4:30 PM</th><td>Group stage begins</td></tr>
+          <tr><th>7:00 PM</th><td>Round of 16 + Quarterfinals</td></tr>
+          <tr><th>8:30 PM</th><td>Semifinals</td></tr>
+          <tr><th>9:15 PM</th><td>3rd Place match</td></tr>
+          <tr><th>9:45 PM</th><td>Finals on main screen + trophy moment</td></tr>
+        </table>
+        <p class="fine">
+          Exact times depend on match length and station availability (up to 5 simultaneous matches).
+        </p>
+      </div>
+    </div>
+
+    <div class="section two" id="rules">
+      <div class="card">
+        <h2>Rules (Short Version)</h2>
+        <ul>
+          <li><strong>Check-in:</strong> teams must check in 30 mins early.</li>
+          <li><strong>Forfeits:</strong> 10-minute grace period, then forfeit.</li>
+          <li><strong>Disconnects:</strong> replay only if agreed + early match state (see full rules).</li>
+          <li><strong>Conduct:</strong> respectful behavior required; organizer decision is final.</li>
+          <li><strong>Controllers:</strong> bring your own if possible; limited spares available.</li>
+        </ul>
+        <p class="fine">You can link a full PDF rules doc here once you have it.</p>
+        <div class="cta">
+          <a class="btn" id="rulesPdf" href="#" target="_blank" rel="noreferrer">📄 Download Full Rules (PDF)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Game Settings (Example)</h2>
+        <table class="table">
+          <tr><th>Match Length</th><td>6 minutes (or your choice)</td></tr>
+          <tr><th>Difficulty</th><td>World Class / Legendary (choose one)</td></tr>
+          <tr><th>Extra Time</th><td>Off in group / On in knockout (optional)</td></tr>
+          <tr><th>Penalties</th><td>On (knockout only)</td></tr>
+          <tr><th>Pauses</th><td>Limited (e.g., 2 per match)</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="section" id="signup">
+      <div class="card">
+        <h2>Team Signup</h2>
+        <p class="muted" style="margin:0 0 10px;">
+          Fill this out to reserve your slot. We’ll confirm once payment is received.
+        </p>
+
+        <!-- Option A: This form emails you (simple). Replace YOUREMAIL below. -->
+        <form id="signupForm">
+          <div class="formgrid">
+            <div>
+              <label for="team">Team Name</label>
+              <input id="team" name="team" required placeholder="e.g., Silver Spring FC" />
+            </div>
+            <div>
+              <label for="captain">Captain Name</label>
+              <input id="captain" name="captain" required placeholder="e.g., Vigny" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" required placeholder="(xxx) xxx-xxxx" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="name@email.com" />
+            </div>
+            <div>
+              <label for="platform">Platform</label>
+              <select id="platform" name="platform" required>
+                <option value="">Select…</option>
+                <option>PS5</option>
+                <option>Xbox</option>
+                <option>Either</option>
+              </select>
+            </div>
+            <div>
+              <label for="paid">Payment Status</label>
+              <select id="paid" name="paid" required>
+                <option value="">Select…</option>
+                <option>Paid (include confirmation in notes)</option>
+                <option>Not yet paid</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" placeholder="Payment confirmation #, preferred time, questions..."></textarea>
+            </div>
+          </div>
+
+          <div class="cta" style="margin-top:14px;">
+            <button class="btn primary" type="submit">📨 Submit Signup</button>
+            <a class="btn" href="#details">Back to Details</a>
+          </div>
+
+          <p class="fine">
+            By signing up, you agree to the rules and understand slots are confirmed only after payment.
+          </p>
+        </form>
+
+        <div class="hr"></div>
+
+        <h2>Need Help?</h2>
+        <p class="muted" style="margin:0;">
+          Text/call: <span id="contactPhone">[Your Phone]</span> • Email: <span id="contactEmail">[Your Email]</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Soccer Tournament Night</div>
+      <div class="muted">Built for: bar tournaments • DJ • big screen vibe</div>
+    </div>
+  </div>
+
+  <script>
+    // ==== EDIT THESE VALUES (quick setup) ====
+    const CONFIG = {
+      venue: "Your Venue Name — City, State",
+      dateTime: "Month Day, 2026 — 4:00PM to 10:00PM",
+      contactPhone: "(xxx) xxx-xxxx",
+      contactEmail: "youremail@example.com",
+      payLinks: {
+        cashApp: "https://cash.app/$YourCashtag",
+        zelle: "https://your-zelle-info-link.example.com",
+        eventbrite: "https://your-eventbrite-link.example.com"
+      },
+      rulesPdf: "https://your-rules-pdf-link.example.com",
+      mailtoTo: "youremail@example.com" // where the form sends the email
+    };
+
+    // Populate text
+    document.getElementById("venueText").textContent = CONFIG.venue;
+    document.getElementById("dateText").textContent = CONFIG.dateTime;
+    document.getElementById("contactPhone").textContent = CONFIG.contactPhone;
+    document.getElementById("contactEmail").textContent = CONFIG.contactEmail;
+    document.getElementById("payLink1").href = CONFIG.payLinks.cashApp;
+    document.getElementById("payLink2").href = CONFIG.payLinks.zelle;
+    document.getElementById("payLink3").href = CONFIG.payLinks.eventbrite;
+    document.getElementById("rulesPdf").href = CONFIG.rulesPdf;
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple mailto submit (no backend needed)
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const obj = Object.fromEntries(data.entries());
+
+      const subject = encodeURIComponent(`Team Signup: ${obj.team}`);
+      const body = encodeURIComponent(
+`New Team Signup
+
+Team: ${obj.team}
+Captain: ${obj.captain}
+Phone: ${obj.phone}
+Email: ${obj.email}
+Platform: ${obj.platform}
+Payment: ${obj.paid}
+
+Notes:
+${obj.notes || "(none)"}
+
+— Sent from Tournament Website`
+      );
+
+      window.location.href = `mailto:${CONFIG.mailtoTo}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
